@@ -26,7 +26,7 @@
 }
 
 @media (min-width: 991px) {
-  .asb19__header--nav .navbar-nav .nav-item {padding: 0 var(--bs-navbar-nav-link-padding-x);--bs-navbar-nav-link-padding-x: 17px;}
+  .asb19__header--nav .navbar-nav .nav-item {padding: 0 var(--bs-navbar-nav-link-padding-x);--bs-navbar-nav-link-padding-x: 10px;}
   .asb19__header--nav .navbar-nav .nav-link {--bs-navbar-nav-link-padding-x: 0;}
 }    
 @media only screen and (max-width: 991.98px) {    
