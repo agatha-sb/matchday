@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+@media (min-width: 1600px) and (max-width: 1500px){
+	
+}
+
+@media (min-width: 1400px) and (max-width: 1500px){
+	
+}
+
+@media (min-width: 1300px) and (max-width: 1400px){
+	
+}
+@media (min-width: 1200px) and (max-width: 1300px){
+	
+}
+
+@media (min-width: 1024px) and (max-width: 1200px){
+	
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+	
+}
+
+@media (min-width: 991px) {
+  .asb19__header--nav .navbar-nav .nav-item {padding: 0 var(--bs-navbar-nav-link-padding-x);--bs-navbar-nav-link-padding-x: 17px;}
+  .asb19__header--nav .navbar-nav .nav-link {--bs-navbar-nav-link-padding-x: 0;}
+}    
+@media only screen and (max-width: 991.98px) {    
+
+}
+
+
+@media (max-width: 767.98px){
+    
+}
+
+@media (max-width: 575.98px){
+    
+}
