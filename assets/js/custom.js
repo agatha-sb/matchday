@@ -17,7 +17,7 @@ $(window).on('scroll', function() {
 // ************************************************* //
 // * ++++++++      02. Fancybox          +++++++++ * //
 // ************************************************* //
-Fancybox.bind('[data-fancybox="gallery-1"]', {
+Fancybox.bind('[data-fancybox="showcaseGallery"]', {
   caption: function (fancybox, slide) {
     const figurecaption = slide.triggerEl?.querySelector(".tab-caption");
     return figurecaption ? figurecaption.innerHTML : slide.caption || "";
@@ -31,15 +31,15 @@ $(document).ready(function(){
 })
 
 
-var agentsSwiper = new Swiper(".asb19__agents--swiper", {
+var showcaseSwiper = new Swiper(".asb19__showcase--swiper", {
   autoPlay: false,
   spaceBetween: 24,
   autoplay: {
     delay: 3000,
   },
   navigation: {
-    nextEl: ".swiper-button-next-agentsSW",
-    prevEl: ".swiper-button-prev-agentsSW",
+    nextEl: ".swiper-button-next-showcaseSW",
+    prevEl: ".swiper-button-prev-showcaseSW",
   },
   pagination: {
     el: ".swiper-pagination",
