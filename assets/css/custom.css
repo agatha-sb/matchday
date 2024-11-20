@@ -173,7 +173,7 @@ section[class^="asb19__"] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to right, #ED1B24 0%, #0059A9 100%);
+  background: linear-gradient(to right, var(--global-blue-shade) 0%, var(--global-blue) 100%);
   color: var(--global-white);
   font-family: var(--ff-body);
   font-weight: 700;
@@ -208,7 +208,7 @@ section[class^="asb19__"] {
 } */
 .asb19__btn:hover {
   transition: all 0.3s ease-in-out;
-  background: linear-gradient(to left, #ED1B24 0%, #0059A9 100%);
+  background: linear-gradient(to left, var(--global-blue-shade) 0%, var(--global-blue) 100%);
   color: var(--global-white);
 }
 .asb19__btn:hover::before {
@@ -277,11 +277,12 @@ section[class^="asb19__"] {
   position: relative;
 }
 .asb19__heading h3 {
-  font-size: 45px;
+  font-size: 37px;
   font-weight: 700;
-  line-height: 60px;
+  line-height: 45px;
   letter-spacing: -1px;
   text-transform: uppercase;
+  color: var(--global-blue);
 }
 .asb19__heading--white h3 {
   color: var(--clr-white);
@@ -303,9 +304,7 @@ section[class^="asb19__"] {
 
 .highlight {
   display: inline-block;
-  background-color: var(--global-red);
-  color: var(--global-white);
-  padding: 0 20px;
+  color: var(--global-red);
   border-radius: 50px;
   line-height: 60px;
 }
@@ -638,7 +637,7 @@ animation: menu-sticky 1s ease-in-out;
   background-image: linear-gradient( to bottom, rgba(0, 0, 0, 0) 0%, rgba(7, 45, 79, 0.33) 100%);
   left: 0;
   top: 0;
-  z-index: 0;
+  z-index: 1;
 }
 .asb19__casestudies--link .asb19__content {
   position: absolute;
@@ -646,6 +645,7 @@ animation: menu-sticky 1s ease-in-out;
   left: 0;
   bottom: 0;
   padding: 30px 40px;
+  z-index: 3;
 }
 .asb19__casestudies--link .asb19__content h3 {
   color: var(--global-red);
@@ -705,7 +705,7 @@ animation: menu-sticky 1s ease-in-out;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 15px 25px;
+  padding: 10px 10px;
   border-bottom: 1px solid #f4f4f4;
 }
 .asb19__clientele--single img {
@@ -937,7 +937,7 @@ animation: menu-sticky 1s ease-in-out;
 .asb19__newsletter form {
   background-color: var(--global-white);
   display: inline-block;
-  padding: 5px 22px 5px 0px;
+  padding: 5px 33px 5px 0px;
   border-radius: 50px;
 }
 .asb19__newsletter .form-control {
