@@ -918,7 +918,7 @@ animation: menu-sticky 1s ease-in-out;
   position: relative;
   z-index: 3;
 }
-.asb19__footer::before {
+/* .asb19__footer::before {
   position: absolute;
   content: "";
   background-image: url('../images/footer-pattern.png');
@@ -928,7 +928,7 @@ animation: menu-sticky 1s ease-in-out;
   background-size: contain;
   opacity: 0.5;
   z-index: -1;
-}
+} */
 .asb19__footer--socials {
   display: flex;
   gap: 12px;
