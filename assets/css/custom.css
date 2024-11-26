@@ -295,6 +295,9 @@ section[class^="asb19__"] {
   font-weight: 400;
   line-height: 44px;
 }
+.asb19__heading--blue > * {
+  color: var(--global-blue-shade);
+}
 
 
 .highlight {
@@ -753,6 +756,48 @@ animation: menu-sticky 1s ease-in-out;
   overflow: hidden;
   border-radius: 5px;
 }
+
+.asb19__services--accordion .accordion-item {
+  background-color: var(--global-blue);
+  color: var(--global-white);
+  border-radius: 40px !important;
+  overflow: hidden;
+  border: none !important;
+}
+
+.asb19__services--accordion .accordion-item + .accordion-item {
+  margin-top: 12px;
+}
+.asb19__services--accordion .accordion-button {
+  color: var(--global-white);
+  background-color: var(--global-blue);
+  padding: 25px 32px 25px;
+}
+.asb19__services--accordion .accordion-button::after {
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z'/%3E%3C/svg%3E");
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M19 12.998H5v-2h14z'/%3E%3C/svg%3E");
+  --bs-accordion-btn-icon-width: 25px;
+}
+.asb19__services--accordion .accordion-button h4 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+}
+.asb19__services--accordion .accordion-button:not(.collapsed) {
+  color: var(--global-white);
+  background-color: transparent;
+  box-shadow: unset;
+}
+.asb19__services--accordion .accordion-body {
+  padding: 0px 32px 25px;
+}
+.asb19__services--media {
+  margin-top: 40px;
+}
+.asb19__services--media .asb19__img {
+  border-radius: 40px;
+}
+
 /** ----------------------------
 *    Section: Casestudies End
 **  --------------------------*/
