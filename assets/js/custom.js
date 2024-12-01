@@ -58,6 +58,49 @@ var showcaseSwiper = new Swiper(".asb19__showcase--swiper", {
   }
 });
 
+var tag = document.createElement('script');
+tag.src = 'https://www.youtube.com/iframe_api';
+
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var player;
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        width: '100%',
+        height: '100%',
+        playerVars: {
+            autoplay: 1,
+            loop: 1,
+            controls: 0,
+            // showinfo: 0,
+            autohide: 1,
+            modestbranding: 1,
+            mute: 1,
+            suggestedQuality: 'default',
+        },
+        videoId: document.getElementById('player').dataset.id,
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+    });
+}
+
+function onPlayerReady(event) {
+    event.target.playVideo();
+    player.mute();
+}
+
+var done = false;
+
+function onPlayerStateChange(e) {
+    var id = document.getElementById('player').dataset.id;
+
+    if (e.data === YT.PlayerState.ENDED) {
+        player.loadVideoById(id);
+    }
+}
+
 $('.popup-youtube').magnificPopup({
   type: 'iframe',
   iframe: {
