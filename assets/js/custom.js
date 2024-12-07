@@ -23,6 +23,12 @@ Fancybox.bind('[data-fancybox="showcaseGallery"]', {
     return figurecaption ? figurecaption.innerHTML : slide.caption || "";
   },
 });
+Fancybox.bind('[data-fancybox="casestudiesGallery"]', {
+  caption: function (fancybox, slide) {
+    const figurecaption = slide.triggerEl?.querySelector(".tab-caption");
+    return figurecaption ? figurecaption.innerHTML : slide.caption || "";
+  },
+});
 
 $(document).ready(function(){
   if ($(window).width() > 991) {
