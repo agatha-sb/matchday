@@ -29,6 +29,12 @@ Fancybox.bind('[data-fancybox="casestudiesGallery"]', {
     return figurecaption ? figurecaption.innerHTML : slide.caption || "";
   },
 });
+Fancybox.bind('[data-fancybox="portfolioGallery"]', {
+  caption: function (fancybox, slide) {
+    const figurecaption = slide.triggerEl?.querySelector(".tab-caption");
+    return figurecaption ? figurecaption.innerHTML : slide.caption || "";
+  },
+});
 
 $(document).ready(function(){
   if ($(window).width() > 991) {
@@ -107,28 +113,47 @@ function onPlayerStateChange(e) {
     }
 }
 
-$('.popup-youtube').magnificPopup({
-  type: 'iframe',
-  iframe: {
-    patterns: {
-      youtube: {
-        index: 'youtube.com/',
-        id: function (url) {
-          var m = url.match(/[\\?\\&]v=([^\\?\\&]+)/);
-          if (!m || !m[1]) return null;
-          return m[1];
-        },
-        src: '//www.youtube.com/embed/%id%?autoplay=1'
-      },
-      vimeo: {
-        index: 'vimeo.com/',
-        id: function (url) {
-          var m = url.match(/(https?:\/\/)?(www.)?(player.)?vimeo.com\/([a-z]*\/)*([0-9]{6,11})[?]?.*/);
-          if (!m || !m[5]) return null;
-          return m[5];
-        },
-        src: '//player.vimeo.com/video/%id%?autoplay=1'
-      }
-    }
+$(document).ready(function () {
+  const $items = $('.asb19__portfolio--item');
+  let index1 = 1;
+  let diff1 = 8; 
+  while (index1 <= $items.length) {
+    $items.eq(index1 - 1).addClass('asb19__portfolio--span3');
+    index1 += diff1;
+    diff1 = diff1 === 8 ? 6 : 8;
+  }
+  let index2 = 2;
+  let diff2 = 6;
+  while (index2 <= $items.length) {
+    $items.eq(index2 - 1).addClass('asb19__portfolio--span2');
+    index2 += diff2;
+    diff2 = diff2 === 6 ? 8 : 6;
   }
 });
+
+
+$(document).ready(function() {
+  var $shapesCollection = $(".asb19__portfolio--item");
+  var $tooltip = $("#tooltip");
+  $shapesCollection.on("mousemove", function(evt) {
+    showTooltip(evt, $(this));
+  });
+
+  $shapesCollection.on("mouseout", function() {
+    hideTooltip();
+  });
+
+  function showTooltip(evt, $element) {
+    $tooltip.css({
+      "visibility": "visible",
+      "top": (evt.clientY + 5) + "px",
+      "left": (evt.clientX + 5) + "px"
+    });
+    $tooltip.text($element.attr("data-tooltip-text"));
+  }
+
+  function hideTooltip() {
+    $tooltip.css("visibility", "hidden");
+  }
+});
+

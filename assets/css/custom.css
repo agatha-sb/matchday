@@ -1494,11 +1494,10 @@ animation: menu-sticky 1s ease-in-out;
 /** ----------------------------
 *  Page: Casestudies Start
 **  --------------------------*/
-.asb19__casestudies--grid {
+/* .asb19__casestudies--grid {
   column-count: 3;
   gap: 30px;
-}
-
+} */
 .asb19__casestudies--grid-link {
   display: block;
   display: flex;
@@ -1507,19 +1506,24 @@ animation: menu-sticky 1s ease-in-out;
 }
 .asb19__casestudies--grid-item {
   display: inline-block;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 .asb19__casestudies--grid-link .asb19__content h4 {
   font-size: 20px;
   text-transform: uppercase;
   color: var(--global-blue);
   margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
 }
-.asb19__casestudies--grid-link .asb19__img {
+.asb19__casestudies--grid-link:hover  .asb19__content h4 {
+  color: var(--global-red);
+  transition: all 0.3s ease-in-out;
+}
+/* .asb19__casestudies--grid-link .asb19__img {
   padding: 10px;
   background-color: #f4f4f4;
   border-radius: 10px;
-}
+} */
 .asb19__casestudies--grid-link .asb19__img  img {
   border-radius: 10px;
 }
@@ -1536,4 +1540,76 @@ animation: menu-sticky 1s ease-in-out;
 /** ----------------------------
 *  Page: Casestudies End
 **  --------------------------*/
+.asb19__portfolio {
+  overflow: hidden;
+}
+.asb19__portfolio--wrap .nav-tabs {
+  gap: 10px;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+}
+.asb19__portfolio--wrap .tab-pane {
+  transition: opacity 0.2s ease-in-out;
+}
+.asb19__portfolio--grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 5 columns */
+  /* grid-template-rows: 270px; Each row height maintains 1080:1350 ratio */
+  grid-gap: 25px;
+  /* width: 90%;
+  max-width: 1200px; */
+}
+
+.asb19__portfolio--item {
+  /* background: #222; */
+  border-radius: 8px;
+}
+
+
+/* Repeating structure using nth-child */
+/* .asb19__portfolio--item:nth-child(1), .asb19__portfolio--item:nth-child(9), .asb19__portfolio--item:nth-child(15), .asb19__portfolio--item:nth-child(23), .asb19__portfolio--item:nth-child(29) {
+  grid-column: span 3;
+  grid-row: span 3;
+} */
+.asb19__portfolio--item.asb19__portfolio--span3 {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+.asb19__portfolio--item.asb19__portfolio--span2 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.asb19__portfolio--item a {
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.asb19__portfolio--wrap .nav-tabs .nav-link {
+  padding: 10px 35px;
+  border: 1px solid #f2f2f2;
+  background-color: var(--global-blue);
+  border-radius: 50px;
+  color: var(--global-blue);
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: linear-gradient(to right, #003B9305 0%, #0059a91a 100%);
+}
+.asb19__portfolio--wrap .nav-tabs .nav-link.active {
+  background: linear-gradient(to right, #003B9305 0%, #0059a91a 100%);
+  background: linear-gradient(to right, var(--global-red-shade) 0%, var(--global-red) 100%);
+  color: var(--global-white);
+  border-color: var(--global-red-shade);
+}
+
+#tooltip {
+  position: absolute;
+  padding: 8px 20px;
+  background-image: linear-gradient(to right, var(--global-white) 0%, #dff0ff 100%);
+  border-radius: 50px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
 /** =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+ INNERPAGES END =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+ */
