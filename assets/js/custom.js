@@ -156,4 +156,3 @@ $(document).ready(function() {
     $tooltip.css("visibility", "hidden");
   }
 });
-

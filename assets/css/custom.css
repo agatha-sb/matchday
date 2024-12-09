@@ -221,7 +221,8 @@ section[class^="asb19__"] {
   letter-spacing: 0;
   border: none;
   font-size: 15px;
-  color: var(--global-white);display: inline-flex;
+  color: var(--global-white);
+  display: inline-flex;
   justify-content: end;
   text-transform: uppercase;
   font-weight: 600;
@@ -1494,40 +1495,75 @@ animation: menu-sticky 1s ease-in-out;
 /** ----------------------------
 *  Page: Casestudies Start
 **  --------------------------*/
-/* .asb19__casestudies--grid {
-  column-count: 3;
-  gap: 30px;
-} */
-.asb19__casestudies--grid-link {
-  display: block;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+
 .asb19__casestudies--grid-item {
   display: inline-block;
-  /* margin-bottom: 30px; */
+  margin-bottom: 40px;
 }
-.asb19__casestudies--grid-link .asb19__content h4 {
-  font-size: 20px;
+.asb19__casestudies--inner-wrap {
+  column-count: 2;
+  gap: 50px;
+}
+.asb19__casestudies--tags {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px !important;
+  padding-left: 40px;
+  position: relative;
+}
+.asb19__casestudies--grid-item .asb19__casestudies--tags::before {
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 2px;
+  background-color: var(--global-red);
+  left: 0;
+  top: 13px;
+}
+.asb19__casestudies--grid-item .asb19__content {
+  margin-top: 15px;
+}
+.asb19__casestudies--tags li a {
+  font-size: 18px;
+  color: var(--global-black);
+}
+.asb19__casestudies--tags li + li::before {
+  position: absolute;
+  content: "/";
+  left: 0;
+}
+.asb19__casestudies--tags li {
+  position: relative;
+}
+.asb19__casestudies--tags li + li {
+  padding-left: 12px;
+  margin-left: 4px;
+}
+.asb19__casestudies--grid-item .asb19__casestudies--grid-title {
+  display: block;
+  margin-bottom: 10px !important;
+}
+.asb19__casestudies--grid-item .asb19__content h4 {
+  font-size: 28px;
   text-transform: uppercase;
   color: var(--global-blue);
   margin-bottom: 10px;
   transition: all 0.3s ease-in-out;
+  font-weight: 700;
 }
-.asb19__casestudies--grid-link:hover  .asb19__content h4 {
+.asb19__casestudies--grid-item:hover  .asb19__content h4 {
   color: var(--global-red);
   transition: all 0.3s ease-in-out;
 }
-/* .asb19__casestudies--grid-link .asb19__img {
-  padding: 10px;
-  background-color: #f4f4f4;
-  border-radius: 10px;
-} */
-.asb19__casestudies--grid-link .asb19__img  img {
+.asb19__casestudies--img a {
+  display: inline-block;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.asb19__casestudies--grid-item .asb19__img  img {
   border-radius: 10px;
 }
-.asb19__casestudies--grid-link .asb19__content p {
+.asb19__casestudies--grid-item .asb19__content p {
   font-size: 18px;
   line-height: 27px;
   color: var(--global-black);
@@ -1537,8 +1573,15 @@ animation: menu-sticky 1s ease-in-out;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
 }
+.asb19__casestudies--grid-item .asb19__btn--link {
+  color: var(--global-black);
+  font-size: 18px;
+}
 /** ----------------------------
 *  Page: Casestudies End
+**  --------------------------*/
+/** ----------------------------
+*     Page: Portfolio Start
 **  --------------------------*/
 .asb19__portfolio {
   overflow: hidden;
@@ -1554,24 +1597,12 @@ animation: menu-sticky 1s ease-in-out;
 }
 .asb19__portfolio--grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 5 columns */
-  /* grid-template-rows: 270px; Each row height maintains 1080:1350 ratio */
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 25px;
-  /* width: 90%;
-  max-width: 1200px; */
 }
-
 .asb19__portfolio--item {
-  /* background: #222; */
   border-radius: 8px;
 }
-
-
-/* Repeating structure using nth-child */
-/* .asb19__portfolio--item:nth-child(1), .asb19__portfolio--item:nth-child(9), .asb19__portfolio--item:nth-child(15), .asb19__portfolio--item:nth-child(23), .asb19__portfolio--item:nth-child(29) {
-  grid-column: span 3;
-  grid-row: span 3;
-} */
 .asb19__portfolio--item.asb19__portfolio--span3 {
   grid-column: span 3;
   grid-row: span 3;
@@ -1584,6 +1615,14 @@ animation: menu-sticky 1s ease-in-out;
   display: block;
   border-radius: 20px;
   overflow: hidden;
+}
+.asb19__portfolio--item a img {
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+.asb19__portfolio--item:hover a img {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
 }
 .asb19__portfolio--wrap .nav-tabs .nav-link {
   padding: 10px 35px;
@@ -1602,7 +1641,6 @@ animation: menu-sticky 1s ease-in-out;
   color: var(--global-white);
   border-color: var(--global-red-shade);
 }
-
 #tooltip {
   position: absolute;
   padding: 8px 20px;
@@ -1612,4 +1650,7 @@ animation: menu-sticky 1s ease-in-out;
   text-transform: uppercase;
   font-weight: 600;
 }
+/** ----------------------------
+*     Page: Portfolio Start
+**  --------------------------*/
 /** =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+ INNERPAGES END =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+ */
